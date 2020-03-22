@@ -1,4 +1,5 @@
 window.onload = function() {
+    let cacheName = latinize($('.cacheDetailsTitle span').html());
     let geocacheCoordinateElement = $('#uxLatLon');
 
     geocacheCoordinateElement.parent().closest('div')
@@ -37,6 +38,8 @@ window.onload = function() {
             toastr.success('Longitude copied!');
             return false;
         });
+
+        pluginContainer.append("<br />Point name:<br /><div><input type='text' id='ncacheName' value='" + cacheName + "'> <button id='nExportToMovesCount'>Export to Movescount</button></div>");
 
     } else {
         pluginContainer.append("Error: " + text);

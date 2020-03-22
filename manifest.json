@@ -9,7 +9,8 @@
         "jquery-3.4.1.min.js",
         "src/geocaching.js",
         "src/geopoint.js",
-        "third_party/toastr/toastr.min.js"
+        "third_party/toastr/toastr.min.js",
+        "third_party/latinize.js"
       ],
       "css": [
         "src/geocaching.css",
