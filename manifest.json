@@ -1,0 +1,21 @@
+{
+  "name": "Geocaching.com plugin",
+  "version": "0.0.1",
+  "description": "This plugin will easily send geocache to your Suunto clock (via movescount)",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "js": [
+        "jquery-3.4.1.min.js",
+        "src/geocaching.js",
+        "src/geopoint.js",
+        "third_party/toastr/toastr.min.js"
+      ],
+      "css": [
+        "src/geocaching.css",
+        "third_party/toastr/toastr.css"
+      ],
+      "matches": ["https://www.geocaching.com/geocache/*"]
+    }
+  ]
+}
