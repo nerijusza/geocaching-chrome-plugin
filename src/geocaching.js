@@ -1,4 +1,12 @@
 window.onload = function() {
+    if (window.location.hostname.includes('geocaching.com')) {
+        geocachingMain();
+    } else { // moves count
+        movesCountMain();
+    }
+};
+
+function geocachingMain() {
     let cacheName = latinize($('.cacheDetailsTitle span').html());
     let geocacheCoordinateElement = $('#uxLatLon');
 
@@ -44,7 +52,20 @@ window.onload = function() {
     } else {
         pluginContainer.append("Error: " + text);
     }
-};
+}
+
+function movesCountMain() {
+    setTimeout(function () {
+        console.log("1111");
+        $('#CreateWaypointBtn').click();
+        $('#ctl00_leftColumn_Navigation_WaypointEditTemplate0_Controls_NameTb').click().val('hahaha');
+        $('#ctl00_leftColumn_Navigation_WaypointEditTemplate0_Controls_LatTb').focus().val('54.43532');
+        $('#ctl00_leftColumn_Navigation_WaypointEditTemplate0_Controls_LonTb').focus().val('24.6666');
+        $('#ctl00_leftColumn_Navigation_WaypointEditTemplate0_CancelSaveBtns_SaveBtn').click();
+        $('#ctl00_leftColumn_Navigation_WaypointEditTemplate0_Controls_NameTb').click().val('gagaga');
+        console.log("2222");
+    }, 6000);
+}
 
 
 function copyToClipboard(element) {

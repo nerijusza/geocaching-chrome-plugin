@@ -16,7 +16,10 @@
         "src/geocaching.css",
         "third_party/toastr/toastr.css"
       ],
-      "matches": ["https://www.geocaching.com/geocache/*"]
+      "matches": [
+        "https://www.geocaching.com/geocache/*",
+        "http://www.movescount.com/gear/*"
+      ]
     }
   ]
 }
